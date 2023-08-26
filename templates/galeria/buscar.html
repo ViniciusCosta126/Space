@@ -1,6 +1,5 @@
 {% extends 'galeria/base.html' %} {% load static %} {% block content %}
-<div class="pagina-inicial">
-  <header class="cabecalho">
+<header class="cabecalho">
     <img src="{% static '/assets/logo/Logo(2).png' %}" alt="Logo da Space" />
     <div class="cabecalho__busca">
       <div class="busca__fundo">
@@ -103,13 +102,13 @@
               </div>
             </li>
             {% endfor %} {% else %}
-            <p>sem fotografia</p>
+            <div class="image__texto">
+                <p>Fotografias nao encontradas</p>
+            </div>
             {% endif %}
           </ul>
         </div>
       </section>
     </section>
   </main>
-</div>
-
 {% endblock %}
